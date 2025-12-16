@@ -1,0 +1,23 @@
+Md5 hash:
+md5sum filename
+openssl md5 filename
+echo -n HelloWorld | md5sum
+
+Encrypt with AES:
+openssl enc -aes-256-cbc -salt -in depi.txt -out depi_aes.enc -k DEPIPassword2024
+Decrypt with AES:
+openssl enc -d -aes-256-cbc -in depi_aes.enc -out depi_decrypted_aes.txt -k DEPIPassword2024
+
+Generate RSA Key Pair:
+openssl genrsa -out private.pem 2048
+openssl rsa -in private.pem -pubout -out public.pem
+
+Encrypt with RSA:
+openssl rsautl -encrypt -inkey public.pem -pubin -in depi.txt -out depi_rsa.enc
+Decrypt with RSA:
+openssl rsautl -decrypt -inkey private.pem -in depi_rsa.enc -out depi_decrypted_rsa.txt
+
+
+Show RSA key elements:
+openssl rsa -noout -text -in private.pem
+
