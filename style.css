@@ -518,3 +518,5 @@ main .subjects .progress .number {
     padding: 0 2rem;
   }
 }
+/* Added custom style by Ahmed */
+body { background-color: #f0f8ff; }
