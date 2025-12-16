@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+// add comment in js file for lab
 
     const themeToggler = document.querySelector(".theme-toggler");
     const applySavedTheme = () => {
